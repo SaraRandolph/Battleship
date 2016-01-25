@@ -5,7 +5,6 @@ var ship = {
   isHit:false
 }
 
-
 var missilesFired = 0; 
 var rows = ["A","B","C","D","E","F","G","H", "I","J"]
 
@@ -38,7 +37,8 @@ function hideShip(){
 function Ship(size) {
     this.size = size;
     this.hits = 0;
-    this. isSunk(){
+    this.isSunk = function(){
+    
         if (this.hits>=this.size){
             return true
         } else {
@@ -46,6 +46,8 @@ function Ship(size) {
         }  
     }
 }
+
+
 
 function createShips(totalShips,totalSize) {
     var ships = [];
